@@ -60,4 +60,19 @@ public class FindTransactionsStepDefinitions {
         Assert.assertTrue(findTransactionsPage.firstAndLastDate().size()>1);
     }
 
+    @When("the user enters description {string}")
+    public void the_user_enters_description(String description) {
+        findTransactionsPage.enter_description(description);
+    }
+
+    @Then("results table should only show descriptions containing {string}")
+    public void results_table_should_only_show_descriptions_containing(String string) {
+        Assert.assertTrue(findTransactionsPage.isContainOnly(string));
+    }
+
+    @Then("results table should not show descriptions containing {string}")
+    public void results_table_should_not_show_descriptions_containing(String string) {
+
+    }
+
 }

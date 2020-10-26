@@ -6,7 +6,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
@@ -21,11 +20,17 @@ public class FindTransactionsPage extends BasePage {
     @FindBy(id = "aa_toDate")
     private WebElement toDateInput;
 
+    @FindBy(id = "aa_description")
+    private WebElement descriptionInput;
+
     @FindBy(xpath = "//button[.='Find']")
     private WebElement findButton;
 
     @FindBy(xpath = "//div[@id='filtered_transactions_for_account']//tbody//tr//td[1]")
-    private List<WebElement> listOfDate;
+    private List<WebElement> listOfResultDate;
+
+    @FindBy(xpath = "//div[@id='filtered_transactions_for_account']//tbody//tr//td[2]")
+    private List<WebElement> listOfResultDescription;
 
     public void clickfindTransactions(){
         Browser.waitElementToBeClickableAndClick(findTransactions);
@@ -43,7 +48,7 @@ public class FindTransactionsPage extends BasePage {
     }
 
     public List<WebElement> firstAndLastDate(){
-        List<WebElement> list = listOfDate;
+        List<WebElement> list = listOfResultDate;
 //        for (WebElement each:list) {
 //            System.out.println("each.getText() = " + each.getText());
 //        }
@@ -52,7 +57,7 @@ public class FindTransactionsPage extends BasePage {
 
     public boolean isSort(){
 
-        List<WebElement> list = listOfDate;
+        List<WebElement> list = listOfResultDate;
         ArrayList<String> sortArrlist = new ArrayList<>();
         for (WebElement each:list){
             sortArrlist.add(each.getText());
@@ -70,15 +75,28 @@ public class FindTransactionsPage extends BasePage {
         return sortArrlist.equals(arrlist);
     }
 
-    public boolean isContain(String str){
-        List<WebElement> list = listOfDate;
-        ArrayList<String> arrlist = new ArrayList<>();
-        for (WebElement each:list){
-            arrlist.add(each.getText());
-        }
-        System.out.println("arrlist = " + arrlist);
-        System.out.println("str = " + str);
+    public boolean isContainOnly(String str){
+    boolean res = false;
+    List<WebElement> list = listOfResultDescription;
 
-        return arrlist.contains(str);
+    for (WebElement each :list){
+        if (each.getText().contains(str)){
+            res =true;
+        }else {
+            res=false;
+            System.out.println("FALSE: each.getText() = " + each.getText());
+            list.clear();
+            break;
+
+        }
     }
+        list.clear();
+        return res;
+    }
+
+    public void enter_description(String str){
+        Browser.waitEnterTextWhenVisibil(descriptionInput,str);
+    }
+
+
 }
