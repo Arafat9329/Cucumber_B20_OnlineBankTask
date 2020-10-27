@@ -1,10 +1,13 @@
 package com.zerobank.pages;
 
+import static com.zerobank.utils.Browser.*;
+
 import com.zerobank.utils.Browser;
 import io.cucumber.java.nl.Stel;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import sun.awt.windows.WEmbeddedFrame;
 
@@ -44,7 +47,6 @@ public class FindTransactionsPage extends BasePage {
 
     @FindBy(xpath = "//div[@id='filtered_transactions_for_account']//tbody//tr//td[4]")
     private List<WebElement> listOfWithdrawalResult;
-
 
 
     public void clickfindTransactions(){
@@ -118,10 +120,12 @@ public class FindTransactionsPage extends BasePage {
     }
 
     public boolean isContainOnly(String str){
-        Browser.wait(2);
+       // wait.until(ExpectedConditions.invisibilityOfAllElements(listOfDateResult));
+       // Browser.waitToVisible(listOfDescriptionResult);
+        Browser.wait(1);
         boolean res = false;
         List<WebElement> list = listOfDescriptionResult;
-        //Browser.waitToVisible(listOfResultDescription);
+
         for (WebElement each :list){
             if (each.getText().contains(str)){
                 res =true;
@@ -141,7 +145,7 @@ public class FindTransactionsPage extends BasePage {
     }
 
     public ArrayList<String>listOfDepositResult(){
-        Browser.wait(2);
+        Browser.wait(1);
         List<WebElement> list = listOfDepositResult;
         System.out.println("list = " + list.size());
 
@@ -156,7 +160,7 @@ public class FindTransactionsPage extends BasePage {
     }
 
     public ArrayList<String>listOfWithdrawalResult(){
-        Browser.wait(2);
+        Browser.wait(1);
         List<WebElement> list = listOfWithdrawalResult;
         ArrayList<String>arrayList= new ArrayList<>();
         for (WebElement each:list){
