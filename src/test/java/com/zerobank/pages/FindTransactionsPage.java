@@ -1,11 +1,15 @@
 package com.zerobank.pages;
 
 import com.zerobank.utils.Browser;
+import io.cucumber.java.nl.Stel;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.Select;
+import sun.awt.windows.WEmbeddedFrame;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
@@ -23,14 +27,25 @@ public class FindTransactionsPage extends BasePage {
     @FindBy(id = "aa_description")
     private WebElement descriptionInput;
 
+    @FindBy(id = "aa_type")
+    private WebElement typeSelector;
+
     @FindBy(xpath = "//button[.='Find']")
     private WebElement findButton;
 
     @FindBy(xpath = "//div[@id='filtered_transactions_for_account']//tbody//tr//td[1]")
-    private List<WebElement> listOfResultDate;
+    private List<WebElement> listOfDateResult;
 
     @FindBy(xpath = "//div[@id='filtered_transactions_for_account']//tbody//tr//td[2]")
-    private List<WebElement> listOfResultDescription;
+    private List<WebElement> listOfDescriptionResult;
+
+    @FindBy(xpath = "//div[@id='filtered_transactions_for_account']//tbody//tr//td[3]")
+    private List<WebElement> listOfDepositResult;
+
+    @FindBy(xpath = "//div[@id='filtered_transactions_for_account']//tbody//tr//td[4]")
+    private List<WebElement> listOfWithdrawalResult;
+
+
 
     public void clickfindTransactions(){
         Browser.waitElementToBeClickableAndClick(findTransactions);
@@ -48,7 +63,7 @@ public class FindTransactionsPage extends BasePage {
     }
 
     public List<WebElement> firstAndLastDate(){
-        List<WebElement> list = listOfResultDate;
+        List<WebElement> list = listOfDateResult;
 //        for (WebElement each:list) {
 //            System.out.println("each.getText() = " + each.getText());
 //        }
@@ -56,12 +71,13 @@ public class FindTransactionsPage extends BasePage {
     }
 
     public boolean isSort(){
+        List<WebElement> list = listOfDateResult;
 
-        List<WebElement> list = listOfResultDate;
         ArrayList<String> sortArrlist = new ArrayList<>();
         for (WebElement each:list){
             sortArrlist.add(each.getText());
         }
+
         Collections.sort(sortArrlist);
         Collections.reverse(sortArrlist);
 
@@ -76,27 +92,55 @@ public class FindTransactionsPage extends BasePage {
     }
 
     public boolean isContainOnly(String str){
-    boolean res = false;
-    List<WebElement> list = listOfResultDescription;
-
-    for (WebElement each :list){
-        if (each.getText().contains(str)){
-            res =true;
-        }else {
-            res=false;
-            System.out.println("FALSE: each.getText() = " + each.getText());
-            list.clear();
-            break;
-
+        Browser.wait(2);
+        boolean res = false;
+        List<WebElement> list = listOfDescriptionResult;
+        //Browser.waitToVisible(listOfResultDescription);
+        for (WebElement each :list){
+            if (each.getText().contains(str)){
+                res =true;
+            }else {
+                res=false;
+                System.out.println("FALSE: each.getText() = " + each.getText());
+                list.clear();
+                break;
+            }
         }
-    }
-        list.clear();
-        return res;
-    }
+            list.clear();
+            return res;
+        }
 
     public void enter_description(String str){
-        Browser.waitEnterTextWhenVisibil(descriptionInput,str);
+        Browser.waitEnterTextWhenVisible(descriptionInput,str);
     }
 
+    public ArrayList<String>listOfDepositResult(){
+        List<WebElement> list = listOfDepositResult;
+        Browser.wait(3);
+        ArrayList<String>arrayList= new ArrayList<>();
+        for (WebElement each:list){
+            if (each.getText().equals("")){
+                arrayList.add(each.getText());
+            }
+        }
 
+        return arrayList;
+    }
+
+    public ArrayList<String>listOfWithdrawalResult(){
+        List<WebElement> list = listOfWithdrawalResult;
+        ArrayList<String>arrayList= new ArrayList<>();
+        for (WebElement each:list){
+            if (each.getText().equals("")){
+                arrayList.add(each.getText());
+            }
+        }
+
+        return arrayList;
+    }
+
+    public void typeSelector(String visibleText){
+        Select select = new Select(typeSelector);
+        select.selectByVisibleText(visibleText);
+    }
 }

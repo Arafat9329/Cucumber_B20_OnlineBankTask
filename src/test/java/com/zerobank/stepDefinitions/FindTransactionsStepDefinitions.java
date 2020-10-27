@@ -70,9 +70,36 @@ public class FindTransactionsStepDefinitions {
         Assert.assertTrue(findTransactionsPage.isContainOnly(string));
     }
 
-    @Then("results table should not show descriptions containing {string}")
+    @Then("results table should not show descriptions that not containing {string}")
     public void results_table_should_not_show_descriptions_containing(String string) {
+        Assert.assertTrue(findTransactionsPage.isContainOnly(string));
+    }
+
+    @Then("results table should show at least one result under Deposit")
+    public void results_table_should_show_at_least_one_result_under_deposit() {
+        System.out.println("findTransactionsPage.listOfDepositResult().size() = " + findTransactionsPage.listOfDepositResult().size());
+        Assert.assertTrue(findTransactionsPage.listOfDepositResult().size()>0);
+            }
+
+    @Then("results table should show at least one result under Withdrawal")
+    public void results_table_should_show_at_least_one_result_under_withdrawal() {
+        System.out.println("findTransactionsPage.listOfWithdrawalResult().size() = " + findTransactionsPage.listOfWithdrawalResult().size());
+        Assert.assertTrue(findTransactionsPage.listOfWithdrawalResult().size()>0);
 
     }
 
+    @When("user selects type {string}")
+    public void user_selects_type(String type) {
+        findTransactionsPage.typeSelector(type);
+    }
+
+    @Then("results table should show no result under Withdrawal")
+    public void results_table_should_show_no_result_under_withdrawal() {
+        Assert.assertTrue(findTransactionsPage.listOfWithdrawalResult().size()==0);
+    }
+
+    @Then("results table should show no result under Deposit")
+    public void results_table_should_show_no_result_under_deposit() {
+        Assert.assertTrue(findTransactionsPage.listOfDepositResult().size()==0);
+    }
 }
