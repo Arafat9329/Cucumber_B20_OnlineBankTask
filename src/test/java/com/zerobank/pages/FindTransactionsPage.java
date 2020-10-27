@@ -53,8 +53,10 @@ public class FindTransactionsPage extends BasePage {
 
     public void enter_formAndToDate(String from, String to){
         fromDateInput.click();
+        fromDateInput.clear();
         fromDateInput.sendKeys(from, Keys.ENTER);
         toDateInput.click();
+        toDateInput.clear();
         toDateInput.sendKeys(to,Keys.ENTER);
     }
 
@@ -64,10 +66,34 @@ public class FindTransactionsPage extends BasePage {
 
     public List<WebElement> firstAndLastDate(){
         List<WebElement> list = listOfDateResult;
-//        for (WebElement each:list) {
-//            System.out.println("each.getText() = " + each.getText());
-//        }
      return list;
+    }
+
+    public boolean firstAndLastDate(String beginningDate, String endDate){
+        List<WebElement> list = listOfDateResult;
+        ArrayList<Integer>arrayList = new ArrayList<Integer>();
+        for (WebElement each:list){
+           arrayList.add(Integer.parseInt(each.getText().replaceAll("-",""))) ;
+        }
+        System.out.println("arrayList = " + arrayList);
+
+        ArrayList<Integer>rangeList= new ArrayList<Integer>();
+        int start = Integer.parseInt(beginningDate.replaceAll("-",""));
+        int end = Integer.parseInt(endDate.replaceAll("-",""));
+        int range = end-start;
+        rangeList.add(start);
+        System.out.println("rangeList = " + rangeList);
+        System.out.println("rangeList.get(rangeList.size()-1) = " + rangeList.get(rangeList.size() - 1));
+        for (int i = 0; i < range; i++) {
+            int addOne=rangeList.get(rangeList.size() - 1);
+            rangeList.add((addOne+1));
+            System.out.println("addOne = " + addOne);
+        }
+        System.out.println("rangeList = " + rangeList);
+        System.out.println("arrayList = " + arrayList);
+        System.out.println("rangeList.containsAll(arrayList) = " + rangeList.containsAll(arrayList));
+
+        return  rangeList.containsAll(arrayList);
     }
 
     public boolean isSort(){
@@ -115,23 +141,26 @@ public class FindTransactionsPage extends BasePage {
     }
 
     public ArrayList<String>listOfDepositResult(){
+        Browser.wait(2);
         List<WebElement> list = listOfDepositResult;
-        Browser.wait(3);
+        System.out.println("list = " + list.size());
+
         ArrayList<String>arrayList= new ArrayList<>();
         for (WebElement each:list){
-            if (each.getText().equals("")){
+            if (!each.getText().equals("")){
                 arrayList.add(each.getText());
             }
         }
-
+        System.out.println("arrayList = " + arrayList.size());
         return arrayList;
     }
 
     public ArrayList<String>listOfWithdrawalResult(){
+        Browser.wait(2);
         List<WebElement> list = listOfWithdrawalResult;
         ArrayList<String>arrayList= new ArrayList<>();
         for (WebElement each:list){
-            if (each.getText().equals("")){
+            if (!each.getText().equals("")){
                 arrayList.add(each.getText());
             }
         }

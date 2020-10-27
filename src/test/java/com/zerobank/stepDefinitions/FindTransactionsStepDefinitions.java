@@ -21,7 +21,6 @@ public class FindTransactionsStepDefinitions {
     public void the_user_accesses_the_find_transactions_tab() {
         Driver.getDriver().get(ConfigurationReader.getProperty("onlineBankURL"));
         loginPage.login();
-        //Browser.wait(1);
         System.out.println(Driver.getDriver().getTitle());
         Assert.assertEquals(Driver.getDriver().getTitle(),"Zero - Account Summary");
 
@@ -41,18 +40,13 @@ public class FindTransactionsStepDefinitions {
 
     @Then("results table should only show transactions dates between {string} to {string}")
     public void results_table_should_only_show_transactions_dates_between_to(String beggingDate, String endDate) {
-        List<WebElement> list = findTransactionsPage.firstAndLastDate();
-//        Assert.assertEquals(list.get(0).getText(), endDate);
-//        Assert.assertEquals(list.get(list.size()-1).getText(), beggingDate);
-
+        Assert.assertTrue( findTransactionsPage.firstAndLastDate(beggingDate, endDate));
     }
 
     @Then("the results should be sorted by most recent date")
     public void the_results_should_be_sorted_by_most_recent_date() {
         System.out.println("loginPage = " + findTransactionsPage.isSort());
         Assert.assertTrue(findTransactionsPage.isSort());
-
-
     }
 
     @Then("the results table should only not contain transactions dated {string}")
@@ -78,8 +72,7 @@ public class FindTransactionsStepDefinitions {
     @Then("results table should show at least one result under Deposit")
     public void results_table_should_show_at_least_one_result_under_deposit() {
         System.out.println("findTransactionsPage.listOfDepositResult().size() = " + findTransactionsPage.listOfDepositResult().size());
-        Assert.assertTrue(findTransactionsPage.listOfDepositResult().size()>0);
-            }
+        Assert.assertTrue(findTransactionsPage.listOfDepositResult().size()>0); }
 
     @Then("results table should show at least one result under Withdrawal")
     public void results_table_should_show_at_least_one_result_under_withdrawal() {
