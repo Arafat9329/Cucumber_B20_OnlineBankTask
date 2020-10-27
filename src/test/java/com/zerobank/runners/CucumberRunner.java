@@ -10,8 +10,8 @@ import org.junit.runner.RunWith;
  @CucumberOptions(
          features = "src/test/resources/features",
          glue = "com/zerobank/stepDefinitions",
-         tags = "@OB3",
-         dryRun = false
+         tags = "@OB4",
+         dryRun = true
  )
  public class CucumberRunner {
 

@@ -1,3 +1,4 @@
+@OB4
 Feature: Purchase Foreign Currency
   Scenario: Available currencies
     Given the user accesses the Purchase foreign currency cash tab
