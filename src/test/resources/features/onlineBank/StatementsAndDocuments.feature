@@ -1,3 +1,4 @@
+@OB5
 Feature: Statements and Documents details
   Scenario Outline: Recent statements per year
     Given the user accesses the Statements & Documents tab
