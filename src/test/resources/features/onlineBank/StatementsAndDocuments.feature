@@ -1,4 +1,5 @@
 @OB5
+  @OB5AC1
 Feature: Statements and Documents details
   Scenario Outline: Recent statements per year
     Given the user accesses the Statements & Documents tab
@@ -10,6 +11,8 @@ Feature: Statements and Documents details
       | 2010 | 2     |
       | 2011 | 2     |
       | 2012 | 1     |
+
+  @OB5AC2
   Scenario Outline: Download statements
     Given the user accesses the Statements & Documents tab
       And the user selects the Recent Statements Year <year>

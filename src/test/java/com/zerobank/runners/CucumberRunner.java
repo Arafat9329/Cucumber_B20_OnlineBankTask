@@ -9,7 +9,7 @@ import org.junit.runner.RunWith;
  @CucumberOptions(
          features = "src/test/resources/features",
          glue = "com/zerobank/stepDefinitions",
-         tags = "not @OB5",
+         tags = "not @bug",
          dryRun = false
  )
  public class CucumberRunner {

@@ -72,6 +72,7 @@ public class FindTransactionsPage extends BasePage {
     }
 
     public boolean firstAndLastDate(String beginningDate, String endDate){
+        Browser.wait(2);
         List<WebElement> list = listOfDateResult;
         ArrayList<Integer>arrayList = new ArrayList<Integer>();
         for (WebElement each:list){

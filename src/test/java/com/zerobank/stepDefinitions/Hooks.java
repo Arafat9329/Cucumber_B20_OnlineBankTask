@@ -1,5 +1,6 @@
 package com.zerobank.stepDefinitions;
 
+import com.zerobank.utils.Browser;
 import com.zerobank.utils.Driver;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
@@ -18,6 +19,7 @@ public class Hooks {
 
     @After
     public void tearDown() {
+        Browser.wait(2);
         Driver.closeDriver();
         System.out.println(":::(^_^) End of test execution (*_*):::");
     }
