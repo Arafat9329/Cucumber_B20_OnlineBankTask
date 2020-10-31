@@ -37,7 +37,7 @@ public class StatementsAndDocumentsDetailsPage extends BasePage{
     }
 
     public String lastFileName(){
-        String donloadPath ="C:\\Users\\a9329\\Downloads";
+        String donloadPath ="C:\\Users\\Arpat\\Downloads";
         File dir = new File(donloadPath);
         File[] files  =  dir.listFiles();
         File lastModifiedFile = files[0];
