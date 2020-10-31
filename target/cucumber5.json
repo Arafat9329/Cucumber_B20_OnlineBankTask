@@ -1,0 +1,306 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "start_timestamp": "2020-10-31T01:43:26.234Z",
+        "before": [
+          {
+            "result": {
+              "duration": 7419000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.zerobank.stepDefinitions.Hooks.setup(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "line": 4,
+        "name": "Available currencies",
+        "description": "",
+        "id": "purchase-foreign-currency;available-currencies",
+        "after": [
+          {
+            "result": {
+              "duration": 2637000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.zerobank.stepDefinitions.Hooks.tearDown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 2318000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "the user accesses the Purchase foreign currency cash tab",
+            "match": {
+              "location": "com.zerobank.stepDefinitions.PurchaseForeignCurrencyStepDefinitions.the_user_accesses_the_purchase_foreign_currency_cash_tab()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 529000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "following currencies should be available",
+            "match": {
+              "location": "com.zerobank.stepDefinitions.PurchaseForeignCurrencyStepDefinitions.following_currencies_should_be_available(java.util.List\u003cjava.lang.String\u003e)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "Australia (dollar)"
+                ]
+              },
+              {
+                "cells": [
+                  "Canada (dollar)"
+                ]
+              },
+              {
+                "cells": [
+                  "Switzerland (franc)"
+                ]
+              },
+              {
+                "cells": [
+                  "China (yuan)"
+                ]
+              },
+              {
+                "cells": [
+                  "Denmark (krone)"
+                ]
+              },
+              {
+                "cells": [
+                  "Eurozone (euro)"
+                ]
+              },
+              {
+                "cells": [
+                  "Great Britain (pound)"
+                ]
+              },
+              {
+                "cells": [
+                  "Japan (yen)"
+                ]
+              },
+              {
+                "cells": [
+                  "Mexico (peso)"
+                ]
+              },
+              {
+                "cells": [
+                  "Norway (krone)"
+                ]
+              },
+              {
+                "cells": [
+                  "New Zealand (dollar)"
+                ]
+              },
+              {
+                "cells": [
+                  "Singapore (dollar)"
+                ]
+              }
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@OB4"
+          },
+          {
+            "name": "@OB4AC1"
+          },
+          {
+            "name": "@how"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-10-31T01:43:39.194Z",
+        "before": [
+          {
+            "result": {
+              "duration": 5463000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.zerobank.stepDefinitions.Hooks.setup(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "line": 20,
+        "name": "Error message for not selecting currency",
+        "description": "",
+        "id": "purchase-foreign-currency;error-message-for-not-selecting-currency",
+        "after": [
+          {
+            "result": {
+              "duration": 2625000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.zerobank.stepDefinitions.Hooks.tearDown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1940000000,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "the user accesses the Purchase foreign currency cash tab",
+            "match": {
+              "location": "com.zerobank.stepDefinitions.PurchaseForeignCurrencyStepDefinitions.the_user_accesses_the_purchase_foreign_currency_cash_tab()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 218000000,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "user tries to calculate cost without selecting a currency",
+            "match": {
+              "location": "com.zerobank.stepDefinitions.PurchaseForeignCurrencyStepDefinitions.user_tries_to_calculate_cost_without_selecting_a_currency()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 6000000,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "error message should be displayed",
+            "match": {
+              "location": "com.zerobank.stepDefinitions.PurchaseForeignCurrencyStepDefinitions.error_message_should_be_displayed()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@OB4"
+          },
+          {
+            "name": "@OB4AC2"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-10-31T01:43:49.458Z",
+        "before": [
+          {
+            "result": {
+              "duration": 5398000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.zerobank.stepDefinitions.Hooks.setup(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "line": 25,
+        "name": "Error message for not entering value",
+        "description": "",
+        "id": "purchase-foreign-currency;error-message-for-not-entering-value",
+        "after": [
+          {
+            "result": {
+              "duration": 3495000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.zerobank.stepDefinitions.Hooks.tearDown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1388000000,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "the user accesses the Purchase foreign currency cash tab",
+            "match": {
+              "location": "com.zerobank.stepDefinitions.PurchaseForeignCurrencyStepDefinitions.the_user_accesses_the_purchase_foreign_currency_cash_tab()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 255000000,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "user tries to calculate cost without entering a value",
+            "match": {
+              "location": "com.zerobank.stepDefinitions.PurchaseForeignCurrencyStepDefinitions.user_tries_to_calculate_cost_without_entering_a_value()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 2000000,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "error message should be displayed",
+            "match": {
+              "location": "com.zerobank.stepDefinitions.PurchaseForeignCurrencyStepDefinitions.error_message_should_be_displayed()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@OB4"
+          },
+          {
+            "name": "@OB4AC3"
+          }
+        ]
+      }
+    ],
+    "name": "Purchase Foreign Currency",
+    "description": "",
+    "id": "purchase-foreign-currency",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/onlineBank/PurchaseForeignCurrency.feature",
+    "tags": [
+      {
+        "name": "@OB4",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  }
+]
