@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: Find Transactions in Account Activity
 -------------------------------------------------------------------------------
-Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 41.15 s - in Find Transactions in Account Activity
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 40.965 s - in Find Transactions in Account Activity
