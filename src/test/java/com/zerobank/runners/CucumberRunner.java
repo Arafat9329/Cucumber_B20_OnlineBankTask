@@ -7,7 +7,7 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
  @CucumberOptions(
-         plugin = {"json:target/cucumber1.json",
+         plugin = {"json:target/cucumber.json",
                  "html:target/cucumber-report1.html",
                  "rerun:target/rerun.txt"
                   },
