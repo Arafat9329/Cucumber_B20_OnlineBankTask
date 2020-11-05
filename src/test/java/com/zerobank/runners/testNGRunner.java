@@ -8,6 +8,7 @@ import org.testng.annotations.DataProvider;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
+        plugin =  "rerun:target/rerun.txt",
         features = "src/test/resources/features",
         glue = "com/zerobank/stepDefinitions"
 )
