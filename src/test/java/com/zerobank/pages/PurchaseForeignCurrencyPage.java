@@ -25,7 +25,6 @@ public class PurchaseForeignCurrencyPage extends BasePage {
     private WebElement purchaseButton;
 
 
-
     public void click_payBillsTab_PurchaseForeignCurrency(){
         Browser.waitElementToBeClickableAndClick(click_payBillsTab_PurchaseForeignCurrency);
     }

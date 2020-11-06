@@ -12,6 +12,7 @@ import org.junit.runner.RunWith;
         glue = "com/zerobank/stepDefinitions",
         tags = "not @bug",
         dryRun = false
-)
+                )
+
 public class StatementsAndDocumentsParallelRunner {
 }

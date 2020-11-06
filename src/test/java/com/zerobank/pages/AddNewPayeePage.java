@@ -30,6 +30,7 @@ public class AddNewPayeePage extends BasePage {
     @FindBy(id = "alert_content")
     private WebElement messagePopUp;
 
+
     public void click_topTab_payBills(){
         Browser.waitElementToBeClickableAndClick(payBillsTab);
     }

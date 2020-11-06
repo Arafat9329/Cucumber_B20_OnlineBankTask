@@ -21,6 +21,7 @@ Feature: Find Transactions in Account Activity
       And clicks search
      Then results table should only show descriptions containing "OFFICE"
       But results table should not show descriptions that not containing "OFFICE"
+
   @bug
   Scenario: Search description case insensitive
     Given the user accesses the Find Transactions tab
