@@ -63,5 +63,6 @@ public class AddNewPayeePage extends BasePage {
     public String get_messagePopUpMessage(){
         return messagePopUp.getText();
     }
+
 }
 

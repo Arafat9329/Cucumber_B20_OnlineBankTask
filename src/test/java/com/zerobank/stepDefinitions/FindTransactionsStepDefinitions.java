@@ -91,4 +91,5 @@ public class FindTransactionsStepDefinitions {
     public void results_table_should_show_no_result_under_deposit() {
         Assert.assertTrue(findTransactionsPage.listOfDepositResult().size()==0);
     }
+
 }

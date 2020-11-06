@@ -5,7 +5,6 @@ import com.zerobank.utils.Driver;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.ui.Select;
 
 import java.util.ArrayList;
 import java.util.List;

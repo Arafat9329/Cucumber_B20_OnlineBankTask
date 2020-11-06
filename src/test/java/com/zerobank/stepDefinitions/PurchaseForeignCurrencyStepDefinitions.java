@@ -55,4 +55,5 @@ public class PurchaseForeignCurrencyStepDefinitions {
     public void user_tries_to_calculate_cost_without_entering_a_value() {
         purchaseForeignCurrencyPage.click_calculateCostsButton();
     }
+
 }

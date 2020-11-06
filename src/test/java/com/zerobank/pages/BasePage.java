@@ -20,4 +20,5 @@ public abstract class BasePage {
     public void click_topTab_accountActivityTab(){
         Browser.waitElementToBeClickableAndClick(topTab_accountActivityTab);
     }
+
 }

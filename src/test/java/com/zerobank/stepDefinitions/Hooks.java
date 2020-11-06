@@ -1,7 +1,5 @@
 package com.zerobank.stepDefinitions;
 
-import com.sun.org.apache.bcel.internal.generic.DREM;
-import com.zerobank.utils.Browser;
 import com.zerobank.utils.Driver;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
@@ -34,4 +32,5 @@ public class Hooks {
         Driver.closeDriver();
         System.out.println(":::(^_^) End of test execution (^_^):::");
     }
+
 }

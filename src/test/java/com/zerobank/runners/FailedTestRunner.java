@@ -10,4 +10,5 @@ import org.junit.runner.RunWith;
             glue = "com/zerobank/stepDefinitions"
     )
     public class FailedTestRunner {
+
 }

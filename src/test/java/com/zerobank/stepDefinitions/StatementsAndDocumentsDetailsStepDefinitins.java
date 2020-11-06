@@ -10,7 +10,6 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 
-import java.io.File;
 
 public class StatementsAndDocumentsDetailsStepDefinitins {
     LoginPage loginPage = new LoginPage();
@@ -52,6 +51,7 @@ public class StatementsAndDocumentsDetailsStepDefinitins {
     public void the_file_type_should_be_pdf() {
         Assert.assertTrue(statementsAndDocumentsDetailsPage.lastFileName().contains("pdf"));
     }
+
 }
 
 

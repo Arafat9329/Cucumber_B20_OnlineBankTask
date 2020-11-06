@@ -44,4 +44,5 @@ public class AddNewPayeeStepDefinitions {
     public void message_the_new_payee_the_law_offices_of_hyde_price_scharks_was_successfully_created_should_be_displayed() {
         Assert.assertEquals("The new payee The Law Offices of Hyde, Price & Scharks was successfully created.",addNewPayeePage.get_messagePopUpMessage());
     }
+
 }

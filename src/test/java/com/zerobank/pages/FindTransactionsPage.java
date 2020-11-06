@@ -3,16 +3,12 @@ package com.zerobank.pages;
 import static com.zerobank.utils.Browser.*;
 
 import com.zerobank.utils.Browser;
-import io.cucumber.java.nl.Stel;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
-import sun.awt.windows.WEmbeddedFrame;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
@@ -177,4 +173,5 @@ public class FindTransactionsPage extends BasePage {
         Select select = new Select(typeSelector);
         select.selectByVisibleText(visibleText);
     }
+
 }
