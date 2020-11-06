@@ -50,6 +50,4 @@ public class StatementsAndDocumentsDetailsPage extends BasePage{
         return lastModifiedFile.getName();
     }
 
-
-
 }

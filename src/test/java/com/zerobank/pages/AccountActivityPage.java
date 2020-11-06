@@ -16,7 +16,7 @@ public class AccountActivityPage extends BasePage {
     @FindBy(id = "aa_accountId")
     private WebElement accountDropdownSelector;
 
-    /**
+    /**Account type
      *
      * @param type: Savings, Brokerage, Checking, Credit Card, Loan
      */
@@ -27,6 +27,7 @@ public class AccountActivityPage extends BasePage {
        // }
         Browser.waitElementToBeClickableAndClick(element);
     }
+
     public void clickSavings(){
         Browser.waitElementToBeClickableAndClick(savings);
     }

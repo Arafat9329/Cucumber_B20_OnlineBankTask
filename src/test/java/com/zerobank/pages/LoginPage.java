@@ -19,6 +19,4 @@ public class LoginPage extends BasePage{
         userName_Password.sendKeys(ConfigurationReader.getProperty("onlineBankPassword")+Keys.ENTER);
     }
 
-
-
 }
