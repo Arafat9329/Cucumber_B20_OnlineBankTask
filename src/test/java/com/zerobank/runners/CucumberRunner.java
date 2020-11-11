@@ -12,7 +12,7 @@ import org.junit.runner.RunWith;
                   },
          publish = true,
          features = "src/test/resources/features",
-         glue = "com/zerobank/stepDefinitions",
+         glue = "src/stepDefinitions",
          tags = "not @bug",
          dryRun = false
                  )

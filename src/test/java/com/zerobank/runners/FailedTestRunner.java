@@ -7,7 +7,7 @@ import org.junit.runner.RunWith;
     @RunWith(Cucumber.class)
     @CucumberOptions(
             features = "@target/rerun.txt",
-            glue = "com/zerobank/stepDefinitions"
+            glue = "src/stepDefinitions"
     )
     public class FailedTestRunner {
 

@@ -9,7 +9,7 @@ import org.junit.runner.RunWith;
         plugin = {"html:target/cucumber-report2.html",
                 "json:target/cucumber2.json",},
         features = "src/test/resources/features/onlineBank/AddNewPayee.feature",
-        glue = "com/zerobank/stepDefinitions",
+        glue = "src/stepDefinitions",
         tags = "not @bug",
         dryRun = false
 )

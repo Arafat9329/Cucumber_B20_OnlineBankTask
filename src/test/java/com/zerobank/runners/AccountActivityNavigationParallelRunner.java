@@ -11,7 +11,7 @@ import org.junit.runner.RunWith;
                 "rerun:target/rerun.txt"
         },
         features = "src/test/resources/features/onlineBank/AccountActivityNavigation.feature",
-        glue = "com/zerobank/stepDefinitions",
+        glue = "src/stepDefinitions",
         tags = "not @bug",
         dryRun = false
                 )
