@@ -10,7 +10,7 @@ import org.testng.annotations.DataProvider;
                 "rerun:target/rerun.txt"
                    },
         features = "src/test/resources/features",
-        glue = "src/stepDefinitions",
+        glue = "com/zerobank/stepDefinitions",
         publish = true
                 )
 
