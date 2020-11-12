@@ -24,5 +24,4 @@ public class AccountActivityNavigationStepDefinitions {
         Assert.assertEquals(exp,accountActivityPage.accountDropdownSelector_firstSelected());
 
     }
-
 }

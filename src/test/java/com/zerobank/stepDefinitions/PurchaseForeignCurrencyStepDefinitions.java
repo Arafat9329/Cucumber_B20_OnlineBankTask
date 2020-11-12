@@ -38,13 +38,13 @@ public class PurchaseForeignCurrencyStepDefinitions {
             Assert.assertTrue( arrayList.contains(each));
         }
 
-
     }
 
     @When("user tries to calculate cost without selecting a currency")
     public void user_tries_to_calculate_cost_without_selecting_a_currency() {
        purchaseForeignCurrencyPage.click_calculateCostsButton();
     }
+
     @Then("error message should be displayed")
     public void error_message_should_be_displayed() {
         Assert.assertTrue(purchaseForeignCurrencyPage.isAlarDisplay());
@@ -55,5 +55,4 @@ public class PurchaseForeignCurrencyStepDefinitions {
     public void user_tries_to_calculate_cost_without_entering_a_value() {
         purchaseForeignCurrencyPage.click_calculateCostsButton();
     }
-
 }
