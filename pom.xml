@@ -85,7 +85,7 @@
                     <useUnlimitedThreads>true</useUnlimitedThreads>
                     <!--                    <threadCount>10</threadCount>-->
                     <perCoreThreadCount>false</perCoreThreadCount>
-                    <forkCount>2C</forkCount>
+<!--                    <forkCount>2C</forkCount>-->
                 </configuration>
             </plugin>
 
