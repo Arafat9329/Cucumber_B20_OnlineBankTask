@@ -7,13 +7,13 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
  @CucumberOptions(
          plugin = {"json:target/cucumber.json",
-                 "html:target/cucumber-report1.html",
-                 "rerun:target/rerun.txt"
+//                 "html:target/HTML-report1.html",
+//                 "rerun:target/rerun.txt"
                   },
          publish = true,
          features = "src/test/resources/features",
          glue = "com/zerobank/stepDefinitions",
-         tags = "not @bug",
+         tags = "@OB3",
          dryRun = false
                  )
 
