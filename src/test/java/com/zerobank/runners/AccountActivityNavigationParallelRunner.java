@@ -12,7 +12,7 @@ import org.junit.runner.RunWith;
         },
         features = "src/test/resources/features/onlineBank/AccountActivityNavigation.feature",
         glue = "com/zerobank/stepDefinitions",
-        tags = "not @bug",
+        tags = "@test1",
         dryRun = false
                 )
 

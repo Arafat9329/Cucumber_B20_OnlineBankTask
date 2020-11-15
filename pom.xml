@@ -98,7 +98,7 @@
                         <!--                    <threadCount>3</threadCount>-->
                         <useUnlimitedThreads>true</useUnlimitedThreads>
                         <perCoreThreadCount>false</perCoreThreadCount>
-                        <forkCount>2C</forkCount>
+                        <forkCount>3C</forkCount>
                     </configuration>
                 </plugin>
 
