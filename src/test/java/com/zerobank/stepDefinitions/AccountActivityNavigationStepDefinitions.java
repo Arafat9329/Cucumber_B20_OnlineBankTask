@@ -1,7 +1,7 @@
 package com.zerobank.stepDefinitions;
 
 import com.zerobank.pages.AccountActivityPage;
-import com.zerobank.utils.Driver;
+import com.zerobank.utils.*;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;

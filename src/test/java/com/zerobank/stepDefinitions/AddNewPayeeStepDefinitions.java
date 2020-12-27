@@ -2,8 +2,8 @@ package com.zerobank.stepDefinitions;
 
 import com.zerobank.pages.AddNewPayeePage;
 import com.zerobank.pages.LoginPage;
-import com.zerobank.utils.ConfigurationReader;
-import com.zerobank.utils.Driver;
+import com.zerobank.utils.*;
+
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;

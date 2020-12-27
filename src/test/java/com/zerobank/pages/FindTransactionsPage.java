@@ -1,8 +1,6 @@
 package com.zerobank.pages;
 
-import static com.zerobank.utils.Browser.*;
-
-import com.zerobank.utils.Browser;
+import com.zerobank.utils.*;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;

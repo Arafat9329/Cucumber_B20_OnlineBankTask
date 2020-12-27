@@ -1,11 +1,12 @@
 package com.zerobank.pages;
 
-import com.zerobank.utils.Browser;
-import com.zerobank.utils.Driver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+import com.zerobank.utils.*;
+
 
 public abstract class BasePage {
     public BasePage(){

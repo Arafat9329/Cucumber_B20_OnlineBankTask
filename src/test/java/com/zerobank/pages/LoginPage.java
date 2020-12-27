@@ -1,6 +1,6 @@
 package com.zerobank.pages;
 
-import com.zerobank.utils.ConfigurationReader;
+import com.zerobank.utils.*;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
